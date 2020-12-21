@@ -33,7 +33,7 @@ class Parser
         $created_at = $list['created_at'];//创建日期
         $text_raw = $list['text_raw'];//原始文本（包含空格换行等）
         $text = $list['text'];//带HTML标签的文本
-        $mblogid = $list['mblogid'];//单条微博的id  Jxy7Ek5Mw
+        $mblogid = $list['mblogid'];//单条微博的id  
         $source = $list['source'];//发布设备
         $attitudes_count = $list['attitudes_count']; //点赞数
         $reads_count = $list['reads_count']?:0; //阅读数
@@ -60,7 +60,7 @@ class Parser
         if (!empty($list['pic_ids'])) {
             $pic_ids = self::picIdsParser($list['pic_ids']);
         }
-        //保存图片 路径 ./img/$mblogid/$pic_id.jpg
+        //保存图片
         if (!empty($list['pic_infos'])) {
             $pic_urls = self::picInfosParser($list['pic_infos']);
             foreach ($pic_urls as $k => $pic_url){
@@ -73,7 +73,7 @@ class Parser
         }
 
         echo "正在写入数据库....\n";
-        $sql = "insert into t1 values (null, $userid,$visible,'$mblogid','$created_at','$text_raw','$text','$long_text','$source',$attitudes_count,$reads_count,$comments_count,$pic_num,'$pic_ids','$pic_urls')";
+        $sql = "insert into ".CONFIGS['database']['table_name']." values (null, $userid,$visible,'$mblogid','$created_at','$text_raw','$text','$long_text','$source',$attitudes_count,$reads_count,$comments_count,$pic_num,'$pic_ids','$pic_urls')";
         $db = new SaveToDB();
         $db->insert($sql);
     }
