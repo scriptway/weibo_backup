@@ -32,7 +32,8 @@ return [
         'port' => '3306',
         'user' => 'root',
         'pwd' => 'root',
-        'dbname' => 'weibo',
+        'dbname' => 'weibo',//数据库名
+        'table_name' => 't1',//数据表名
         'charset' => 'utf8mb4'
     ],
 ];
