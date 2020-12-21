@@ -15,7 +15,7 @@ return [
         'accept: application/json, text/plain, */*',
         'accept-language: zh-CN,zh;q=0.9',
         'cookie: YOUR COOKIE',
-        'referer: https://weibo.com/u/2421056485?tabtype=feed',
+        'referer: https://weibo.com/u/1646945885?tabtype=feed',
         'sec-ch-ua: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"',
         'sec-ch-ua-mobile: ?0',
         'sec-fetch-dest: empty',
