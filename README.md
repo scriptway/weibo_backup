@@ -7,7 +7,8 @@ userid => 爬取的用户id
 total => 总微博数 由于接口没有返回这个字段 手动配置下吧  
 per => 每页的微博数据条数  
 pic => 图片保存到同一个文件夹下 或者 每个微博一个文件夹  
-header => 登录微博获取，需要配置下自己的Cookie和token（注意得删除请求头中accept-encoding: gzip, deflate, br 这个字段）  
+header => 登录微博获取，需要配置下自己的Cookie和token（注意得删除请求头中accept-encoding: gzip, deflate, br 这个字段）    
+登录地址 https://weibo.com/ 。如果是登入后显示旧版界面的话 右上角头像偏下的位置有一个立即体验新版微博的入口，切换到新版界面。
 ![请求头](./img/header.jpg)  
 剩下选项的配置文件有注释  
 
