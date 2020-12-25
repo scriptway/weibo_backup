@@ -1,3 +1,0 @@
-<?php
-	ehco "hello git";
-?>
